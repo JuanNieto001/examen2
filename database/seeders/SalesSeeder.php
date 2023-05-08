@@ -3,9 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Sale;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
-class SalesSeeder extends Seeder
+class UsuariosSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +16,14 @@ class SalesSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('sales')->insert([
+            'nombre_empleado' => 'JohnDoe',
+            'nombre_cliente' => 'aguirre ',
+            'precio' => '200',
+            'fecha_compra' => '23',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);   
         
     }
 }
